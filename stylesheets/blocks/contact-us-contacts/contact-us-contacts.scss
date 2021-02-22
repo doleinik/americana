@@ -1,0 +1,126 @@
+.contact-us-contacts {
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 90px;
+	margin-left: auto;
+
+	.contact-us-contacts__wrapper {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.contact-us-contacts__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: 368px;
+		min-height: 150px;
+		margin: 10px;
+		padding-top: 30px;
+		padding-right: 20px;
+		padding-bottom: 30px;
+		padding-left: 42px;
+		background-color: $NightRider;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			display: block;
+			height: 38px;
+			border-left: 7px solid $GreyChateau;
+		}
+	}
+
+	.contact-us-contacts__description {
+		margin-left: 33px;
+	}
+
+	.contact-us-contacts__title {
+		margin-top: 0;
+		margin-right: 0;
+		margin-bottom: 5px;
+		margin-left: 0;
+		font-family: $AbhayaLibre;
+		font-size: 22px;
+		letter-spacing: 0.5px;
+		word-break: break-word;
+		text-align: left;
+		color: $White;
+	}
+
+	.contact-us-contacts__link {
+		margin: 0;
+		text-align: left;
+		font-family: $AbhayaLibre;
+		font-size: 16.5px;
+		word-break: break-word;
+		line-height: 25px;
+		color: $White;
+		cursor: pointer;
+
+		&:visited {
+			color: $White;
+		}
+
+		&:link {
+			color: $White;
+		}
+
+		&:active {
+			color: $White;
+		}
+
+		&:hover {
+			text-decoration: underline;
+			color: $CuriousBlue;
+		}
+	}
+
+	.contact-us-contacts__image--phone {
+		width: 50px;
+		height: 51px;
+	}
+
+	.contact-us-contacts__image--email {
+		width: 51px;
+		height: 39px;
+	}
+
+	.contact-us-contacts__image--address{
+		width: 41px;
+		height: 51px;
+	}
+
+	@include breakpoint(small-tablet-portrait) {
+		margin-bottom: 39px;
+
+		.contact-us-contacts__item {
+			width: 100%;
+			margin-top: 0;
+			margin-right: 0;
+			margin-bottom: 1px;
+			margin-left: 0;
+
+			&::before {
+				display: none;
+			}
+		}
+
+		.contact-us-contacts__description {
+			margin-left: 27px;
+		}
+
+		.contact-us-contacts__item {
+			padding-top: 30px;
+			padding-right: 10px;
+			padding-bottom: 30px;
+			padding-left: 27px;
+		}
+	}
+}

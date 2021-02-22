@@ -1,0 +1,19 @@
+.sticky {
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	animation-name: sticky-navigation;
+	animation-duration: .5s;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes sticky-navigation {
+	0% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

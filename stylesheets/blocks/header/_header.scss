@@ -1,0 +1,139 @@
+@import "follow-us";
+@import "sign-up";
+@import "main-menu";
+@import "contacts";
+@import "mobile-toggle";
+@import "sticky";
+
+.header {
+	position: relative;
+	margin-bottom: 10px;
+	padding-bottom: 80px;
+	background-color: $Snow;
+
+	.header__strip {
+		display: none;
+
+		&.header__strip--active {
+			position: relative;
+			top: 0;
+			z-index: 201;
+		}
+	}
+
+	.header__activity {
+		z-index: 0;
+		display: flex;
+		justify-content: space-between;
+		padding: 30px 50px 0;
+
+		&.header__activity--active {
+			position: fixed;
+			top: 0;
+			z-index: 200;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.header__overlay {
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.4);
+		display: none;
+	}
+
+	.header__logo {
+		position: absolute;
+		left: 50%;
+		overflow: hidden;
+		z-index: 0;
+		display: inline-block;
+		max-width: 300px;
+		max-height: 155px;
+		transform: translate(-50%, -37%);
+	}
+
+	.header__logo-image {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.header__navigation {
+		position: absolute;
+		width: 100%;
+	}
+
+	.header__menu {
+		overflow: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		max-height: 345px;
+		padding: 0 10px;
+		background-color: $NightRider;
+	}
+
+	@include breakpoint(medium) {
+		position: relative;
+		margin-bottom: 0;
+		padding-bottom: 130px;
+
+		.header__strip {
+			position: relative;
+			z-index: 2;
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			padding-top: 8px;
+			padding-right: 5px;
+			padding-bottom: 4px;
+			padding-left: 5px;
+			background-color: $NightRider;
+		}
+
+		.header__logo {
+			position: relative;
+			transform: translate(-50%, 27%);
+		}
+
+		.header__activity {
+			padding: 0;
+		}
+
+		.header__overlay {
+			display: block;
+		}
+
+		.header__popup {
+			position: absolute;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			max-height: 290px;
+			margin: 0;
+			padding: 30px;
+			background-color: $White;
+			transform: translateY(27px);
+			transition: top .7s ease-in-out;
+		}
+
+		.header__navigation {
+			overflow-x: hidden;
+			transform: translateY(38%);
+
+			&.header__navigation--active {
+				z-index: 10;
+			}
+
+			&.header__navigation--sticky {
+				transform: none;
+			}
+
+			&.header__navigation--sticky.header__navigation--active {
+				z-index: auto;
+			}
+		}
+	}
+}

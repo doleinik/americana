@@ -1,0 +1,124 @@
+.button {
+	display: inline-block;
+	padding: 12px 22px;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	box-shadow: none;
+	appearance: none;
+	background-color: $Lochmara;
+	font-family: $Raleway;
+	font-weight: 800;
+	font-size: 14px;
+	text-align: center;
+	text-decoration: none;
+	letter-spacing: 1.7px;
+	color: $White;
+	transition: background-color 0.3s, color 0.3s;
+	cursor: pointer;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+
+	@include hovers(hovers) {
+		background-color: $BahamaBlue;
+		text-decoration: none;
+		color: $White;
+	}
+
+	&:focus {
+		background-color: $BahamaBlue;
+	}
+
+	&.button--rounded {
+		padding: 10px 18px;
+		border-radius: 17px;
+	}
+
+	&.button--blue-rectangular {
+		padding: 10px 50px;
+		background-color: $Lochmara;
+
+		&:focus, &:active {
+			background-color: $BahamaBlue;
+		}
+	}
+
+	&.button--gray-rectangular {
+		padding: 10px 56px;
+		background-color: $GreyChateau;
+
+		@include hovers(hovers) {
+			background-color: $Nevada;
+		}
+
+		&:focus, &:active {
+			background-color: $Nevada;
+		}
+	}
+
+	&.button--transparent {
+		width: 60px;
+		height: 60px;
+		border: 2px solid $GreyChateau;
+		background-color: transparent;
+
+		@include hovers(hovers) {
+			background-color: rgba(170, 170, 170, 0.2);
+		}
+
+		&:disabled, &.button--transparent-disabled {
+			background-color: transparent;
+			opacity: .35;
+
+			@include hovers(hovers) {
+				background-color: transparent;
+			}
+		}
+	}
+
+	&.button--white-rectangular {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 33px 71.2px;
+		background-color: $White;
+		font-family: $Lato;
+		font-weight: 700;
+		font-size: 14px;
+		color: $BlackRussian;
+
+		path {
+			fill: $BlackRussian;
+		}
+
+		@include hovers(hovers) {
+			background-color: rgba($BlackRussian, 0.1);
+			color: $BlackRussian;
+		}
+
+		&:focus, &:active {
+			background-color: rgba($BlackRussian, 0.1);
+		}
+	}
+
+	.button__left-arrow-text {
+		padding-left: 8px;
+	}
+
+	.button__right-arrow-text {
+		padding-right: 8px;
+	}
+
+	&.button--disabled, &:disabled {
+		background-color: $GreyChateau;
+		cursor: default;
+
+		@include hovers(hovers) {
+			background-color: $GreyChateau;
+		}
+
+		&:focus, &:active {
+			background-color: $GreyChateau;
+		}
+	}
+}

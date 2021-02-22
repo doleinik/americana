@@ -1,0 +1,9 @@
+@mixin hovers($point) {
+	@if $point == hovers {
+		@media (-moz-touch-enabled: 0), (hover: hover) {
+			&:hover {
+				@content;
+			}
+		}
+	}
+}

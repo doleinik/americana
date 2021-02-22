@@ -1,0 +1,65 @@
+.form {
+	.form__form-control {
+		outline: none;
+		font-family: $Lato;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 2;
+		color: $BlackRussian;
+		margin: 10px;
+
+		&.form__form-control--rounded,
+		&.form__form-control--transparent {
+			border: 1px solid $Whisper;
+			border-radius: 25px;
+			width: 182px;
+			height: 35px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		&.form__form-control--transparent {
+			background-color: transparent;
+			color: $White;
+		}
+
+		&.form__form-control--form-textarea {
+			resize: none;
+			border: 1px solid $Whisper;
+			line-height: 1.5;
+			background-color: $Snow;
+			padding: 10px;
+		}
+
+		&.form__form-control--standard {
+			border: none;
+			border-bottom: 1px solid $Whisper;
+			padding: 10px;
+			background-color: $Snow;
+
+			@include placeholder {
+				color: $NightRider;
+			}
+		}
+
+		&:disabled {
+			background-color: $Whisper;
+			color: $GreyChateau;
+		}
+
+		&:focus {
+			border-color: $SkyBlue;
+			box-shadow: 0 0 4px $CuriousBlue;
+			outline: 0 none;
+		}
+	}
+
+	@include breakpoint(medium) {
+		.form__form-control {
+			&.form__form-control--rounded,
+			&.form__form-control--transparent {
+				max-width: 100%;
+			}
+		}
+	}
+}

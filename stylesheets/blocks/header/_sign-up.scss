@@ -1,0 +1,46 @@
+.sign-up {
+	max-width: 40%;
+
+	.sign-up__button {
+		max-height: 35px;
+		overflow: hidden;
+		line-height: 1;
+		text-overflow: ellipsis;
+	}
+
+	@include breakpoint(medium) {
+		position: absolute;
+		top: -100%;
+		max-width: 100%;
+
+		&.sign-up--mobile {
+			top: 4px;
+		}
+
+		.sign-up__button {
+			max-width: 300px;
+			width: 100%;
+			margin: 10px 0;
+		}
+
+		.form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			max-width: 50%;
+			margin: 0 auto;
+
+			.form__form-control--rounded {
+				max-width: 300px;
+				width: 100%;
+				margin: 10px 0;
+			}
+		}
+	}
+
+	@include breakpoint(mobile-landscape) {
+		.form {
+			max-width: 100%;
+		}
+	}
+}

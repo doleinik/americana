@@ -1,0 +1,19 @@
+input,
+textarea {
+	box-shadow: none;
+	outline: none;
+	font-family: $Lato;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 2;
+	color: $BlackRussian;
+	margin: 10px;
+}
+
+input:not([type=checkbox]):not([type=radio]),
+textarea,
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}

@@ -1,0 +1,144 @@
+.page-about-us {
+    padding-bottom: 72px;
+    background-color: $GhostWhite;
+
+    .page-about-us__info {
+        width: 100%;
+		margin-top: 93px;
+    }
+
+    .page-about-us__images-wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 38%;
+        margin-bottom: 66px;
+    }
+
+    .page-about-us__aspect-ratio {
+        position: absolute;
+        width: 100%;
+        max-width: 35%;
+        padding-top: 19.5%;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($White, .2);
+            transition-duration: 1s;
+            transition-property: background-color;
+        }
+
+        &:hover {
+            &::after {
+                background-color: rgba($White, 0);
+            }
+        }
+
+        &.page-about-us__aspect-ratio--first {
+            top: 10%;
+            left: 0;
+        }
+
+        &.page-about-us__aspect-ratio--second {
+            top: 0;
+            left: 33%;
+        }
+
+        &.page-about-us__aspect-ratio--third {
+            top: 8%;
+            right: 0;
+        }
+
+        &.page-about-us__aspect-ratio--fourth {
+            bottom: 0;
+            left: 17%;
+        }
+
+        &.page-about-us__aspect-ratio--fifth {
+            right: 16%;
+            bottom: 7%;
+        }
+    }
+
+    .page-about-us__images {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+
+    .page-about-us__text {
+        width: 100%;
+        font-family: $Lato;
+    }
+
+    .page-about-us__paragraph {
+        line-height: 1.8;
+        margin: 32px 0;
+        letter-spacing: 0.4px;
+        font-size: 15px;
+        color: $BlackRussian;
+    }
+
+    @include breakpoint(small) {
+        padding-top: 2px;
+		padding-bottom: 2px;
+
+		.page-about-us__info {
+			margin-top: 30px;
+		}
+
+        .page-about-us__paragraph {
+            line-height: 1.9;
+			margin-top: 11px;
+			margin-bottom: 28px;
+            padding: 0 11px;
+        }
+    }
+
+    @include breakpoint(small-tablet-portrait) {
+        .page-about-us__images-wrapper {
+            position: relative;
+            width: 100%;
+            margin-bottom: 0;
+            padding-top: 87%;
+        }
+
+        .page-about-us__aspect-ratio {
+            max-width: 53%;
+            padding-top: 30%;
+
+            &.page-about-us__aspect-ratio--first {
+                top: 13%;
+                left: 3%;
+            }
+    
+            &.page-about-us__aspect-ratio--second {
+                top: 0;
+                left: 45%;
+            }
+    
+            &.page-about-us__aspect-ratio--third {
+                top: 64%;
+                right: 13%;
+                z-index: 1;
+            }
+    
+            &.page-about-us__aspect-ratio--fourth {
+                bottom: 20%;
+                left: 0;
+            }
+    
+            &.page-about-us__aspect-ratio--fifth {
+                bottom: 35%;
+                right: 0;
+            }
+        }
+    }
+}

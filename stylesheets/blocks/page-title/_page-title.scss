@@ -1,0 +1,59 @@
+.page-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 340px;
+	padding: 10px;
+	background-color: $MidnightExpress;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: center;
+	background-size: contain;
+
+	&.page-title--about-us {
+		background-position-x: 100%;
+		background-position-y: 23%;
+		background-size: 131%;
+	}
+
+	&.page-title--contact-us {
+		min-height: 437px;
+		padding-bottom: 100px;
+		background-position-y: 30%;
+		background-position-x: 1%;
+		background-size: 124%;
+	}
+
+	.page-title__content {
+		max-width: 1175px;
+	}
+
+	.page-title__text {
+		margin-top: 30px;
+		font-size: 79px;
+		color: $White;
+	}
+
+	@include breakpoint(extra-small) {
+		min-height: 275px;
+
+		&.page-title--about-us {
+			background-position-x: 39%;
+			background-position-y: 26%;
+			background-size: 285%;
+		}
+
+		&.page-title--contact-us {
+			min-height: 340px;
+			padding-bottom: 65px;
+			background-position-y: 38%;
+			background-position-x: 55%;
+			background-size: 400%;
+		}
+
+		.page-title__text{
+			margin-top: 7px;
+			font-size: 38px;
+		}
+	}
+}

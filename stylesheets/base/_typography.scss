@@ -1,0 +1,310 @@
+.title {
+	font-family: $AbhayaLibre;
+	font-weight: 700;
+	font-size: 60px;
+	text-align: center;
+	color: $NightRider;
+}
+
+.subtitle {
+	font-family: $AbhayaLibre;
+	font-weight: 400;
+	font-size: 37px;
+	text-align: center;
+	color: $GreyChateau;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+p {
+	font-size: 17px;
+	font-weight: 400;
+	color: $BlackRussian;
+}
+
+.read-more-link {
+	position: relative;
+	display: inline-block;
+	font-family: $Lato;
+	font-weight: 700;
+	word-spacing: 4px;
+	text-decoration: none;
+	color: $Lochmara;
+	-webkit-transition-property: color;
+	-o-transition-property: color;
+	transition-property: color;
+	-webkit-transition-duration: 500ms;
+	-o-transition-duration: 500ms;
+	transition-duration: 500ms;
+
+	.read-more-link-arrow {
+		margin: 0 0 3px 4px;
+	}
+
+	.read-more-link-arrow path {
+		fill: $Lochmara;
+		-webkit-transition-duration: 500ms;
+		-o-transition-duration: 500ms;
+		transition-duration: 500ms;
+		-webkit-transition-property: fill;
+		-o-transition-property: fill;
+		transition-property: fill;
+	}
+
+	&:link {
+		color: $Lochmara;
+
+		.read-more-link-arrow path {
+			fill: $Lochmara;
+		}
+	}
+
+	&:visited {
+		color: $Lochmara;
+
+		.read-more-link-arrow path {
+			fill: $Lochmara;
+		}
+	}
+
+	@include hovers(hovers){
+		color: $CuriousBlue;
+
+		.read-more-link-arrow path {
+			fill: $CuriousBlue;
+		}
+	}
+
+	&:link:active {
+		color: $CuriousBlue;
+
+		.read-more-link-arrow path {
+			fill: $CuriousBlue;
+		}
+	}
+
+	&:visited:active {
+		color: $CuriousBlue;
+
+		.read-more-link-arrow path {
+			fill: $CuriousBlue;
+		}
+	}
+
+	&:focus {
+		color: $CuriousBlue;
+
+		.read-more-link-arrow path {
+			fill: $CuriousBlue;
+		}
+	}
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	display: block;
+	margin-left: 0;
+	margin-right: 0;
+	font-family: $AbhayaLibre;
+	font-weight: bold;
+}
+
+h1, .h1 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 60px;
+}
+
+h2, .h2 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 45px;
+}
+
+h3, .h3 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 32px;
+}
+
+h4, .h4 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 24px;
+}
+
+h5, .h5 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+h6, .h6 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+
+hr, .hr {
+	display: block;
+	margin: 10px auto;
+	border-style: inset;
+	border-width: 1px;
+}
+
+a, .a {
+	display: inline-block;
+	text-decoration: none;
+	font-family: $Lato;
+	color: $Black;
+	-webkit-transition-duration: 500ms;
+	-o-transition-duration: 500ms;
+	transition-duration: 500ms;
+	-webkit-transition-property: color;
+	-o-transition-property: color;
+	transition-property: color;
+
+	&:link {
+		text-decoration: none;
+		color: $Lochmara;
+		cursor: pointer;
+	}
+
+	&:visited {
+		text-decoration: none;
+		color: $Lochmara;
+		cursor: pointer;
+	}
+
+	&:link:active {
+		color: $Lochmara;
+	}
+
+	&:visited:active {
+		color: $Lochmara;
+	}
+
+	@include hovers(hovers){
+		color: $SkyBlue;
+	}
+}
+
+ul, .ul {
+	display: block;
+	list-style-type: none;
+}
+
+ol, .ol {
+	list-style-type: none;
+}
+
+mark, .mark {
+	background-color: yellow;
+	color: $Black;
+}
+
+.rte {
+	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+		display: block;
+		margin-left: 0;
+		margin-right: 0;
+		font-family: $AbhayaLibre;
+		font-weight: bold;
+	}
+
+	h1, .h1 {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 60px;
+	}
+
+	h2, .h2 {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 45px;
+	}
+
+	h3, .h3 {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 32px;
+	}
+
+	h4, .h4 {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 24px;
+	}
+
+	h5, .h5 {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 18px;
+	}
+
+	h6, .h6 {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-size: 12px;
+	}
+
+	p, .p {
+		display: block;
+		margin: 10px 0;
+	}
+
+	hr, .hr {
+		display: block;
+		margin: 10px auto;
+		border-width: 1px;
+		border-style: inset;
+	}
+
+	a, .a {
+		font-family: $Lato;
+
+		&:link {
+			text-decoration: underline;
+			color: $Lochmara;
+			cursor: auto;
+		}
+
+		&:visited {
+			text-decoration: underline;
+			color: $Lochmara;
+			cursor: auto;
+		}
+
+		&:link:active {
+			color: $Lochmara;
+		}
+
+		&:visited:active {
+			color: $Lochmara;
+		}
+
+		@include hovers(hovers){
+			color: $SkyBlue;
+		}
+	}
+
+	ul, .ul {
+		display: block;
+		margin: 10px 0;
+		padding-left: 40px;
+		list-style-type: none;
+	}
+
+	ol, .ol {
+		display: block;
+		margin: 10px 0;
+		padding-left: 40px;
+		list-style-type: none;
+	}
+
+	mark, .mark {
+		background-color: $Raffia;
+		color: $Black;
+	}
+}

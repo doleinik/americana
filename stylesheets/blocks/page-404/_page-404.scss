@@ -1,0 +1,104 @@
+.not-found {
+	.not-found__text-wrapper {
+		padding-top: 67px;
+		background-color: $GhostWhite;
+	}
+
+	.not-found__title {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-weight: 800;
+		letter-spacing: 0.5px;
+	}
+
+	.not-found__subtitle {
+		margin-bottom: 8px;
+	}
+
+	.not-found__desktop-background {
+		position: relative;
+		height: 70vh;
+		min-height: 650px;
+		margin-bottom: 10px;
+		background-color: $GhostWhite;
+		background-image: url("../img/desktop-404.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		text-align: center;
+	}
+
+	.not-found__button {
+		position: absolute;
+		bottom: 28.6%;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 10px 43px;
+		color: $White;
+
+		&:hover {
+			background-color: $BahamaBlue;
+		}
+	}
+
+	@include breakpoint(small) {
+		.not-found__text-wrapper {
+			padding-top: 40px;
+		}
+
+		.not-found__title {
+			margin-top: 0;
+			font-size: 48px;
+		}
+
+		.not-found__subtitle {
+			margin-top: 4px;
+		}
+
+		.not-found__desktop-background {
+			height: auto;
+			min-height: auto;
+			margin-bottom: 0;
+			padding-top: 40px;
+			padding-bottom: 50px;
+			background-image: none;
+		}
+
+		.not-found__mobile-background {
+			height: 200px;
+			background-image: url("../img/mobile-404.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+
+		.not-found__button {
+			position: static;
+			margin-top: 56px;
+			transform: translateX(0);
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.not-found__desktop-background {
+			padding-top: 10px;
+			padding-bottom: 40px;
+		}
+
+		.not-found__title {
+			font-size: 34px;
+		}
+
+		.not-found__subtitle {
+			font-size: 22px;
+		}
+
+		.not-found__mobile-image {
+			height: 150px;
+		}
+
+		.not-found__button {
+			margin-top: 20px;
+		}
+	}
+}

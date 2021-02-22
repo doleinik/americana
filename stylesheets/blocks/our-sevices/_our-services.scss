@@ -1,0 +1,123 @@
+.our-services {
+	width: 100%;
+	height: auto;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	padding-bottom: 8px;
+	background: $NightRider;
+
+	.section-container {
+		padding: 0 5px;
+	}
+
+	.our-services__swiper-container {
+		display: none;
+	}
+
+	.our-services__title {
+		width: 100%;
+		margin: 0;
+		padding-top: 92px;
+		font-size: 37px;
+		text-transform: uppercase;
+		font-weight: 400;
+		color: $GreyChateau;
+	}
+
+	.our-services__subtitle {
+		width: 100%;
+		margin-top: 8px;
+		font-size: 60px;
+		font-weight: 700;
+		letter-spacing: .8px;
+		color: $White;
+	}
+
+	.our-services__items {
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		margin-top: 40px;
+		margin-right: auto;
+		margin-bottom: 130px;
+		margin-left: auto;
+		transform: translateX(10px);
+	}
+
+	@include breakpoint(medium) {
+
+		.our-services__items {
+			display: none;
+		}
+
+		.service-item {
+			width: 100%;
+			margin: 0 15px;
+			padding: 45px;
+		}
+
+		.our-services__swiper-container {
+			position: relative;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			width: 100%;
+			margin: 0 auto;
+			background: $NightRider;
+		}
+
+		.swiper-wrapper {
+			margin-top: 20px;
+		}
+
+		.swiper-slide {
+			display: flex;
+			justify-content: center;
+		}
+
+		.our-services__swiper-button-next,
+		.our-services__swiper-button-prev {
+			position: unset;
+			margin: 0 10px;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		.our-services__swiper-buttons {
+			margin-top: 45px;
+			margin-bottom: 35px;
+		}
+
+		.our-services__title {
+			padding-top: 55px;
+			font-size: 18px;
+			line-height: normal;
+			color: $GreyChateau;
+		}
+
+		.our-services__subtitle {
+			margin-top: 5px;
+			font-size: 28px;
+			line-height: normal;
+		}
+	}
+
+	@include breakpoint(small-tablet-portrait) {
+		.our-services__swiper-container {
+			width: 80%;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.our-services__swiper-container {
+			width: 100%;
+		}
+	}
+}

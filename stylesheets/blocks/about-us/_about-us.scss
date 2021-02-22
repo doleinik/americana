@@ -1,0 +1,139 @@
+.about-us {
+	position: relative;
+	width: 100%;
+	padding-top: 155px;
+	padding-bottom: 122px;
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: $White;
+
+	.about-us__wrapper {
+		display: flex;
+	}
+
+	.about-us__subtitle {
+		margin-bottom: 11px;
+		font-size: 37px;
+		text-align: left;
+	}
+
+	.about-us__title {
+		margin-top: 0;
+		margin-bottom: 31px;
+		font-size: 79px;
+		font-weight: 400;
+		line-height: normal;
+		text-align: left;
+		color: $NightRider;
+	}
+
+	.about-us__info {
+		width: 100%;
+		max-width: 708px;
+		margin-top: 60px;
+	}
+
+	.about-us__text {
+		width: 100%;
+		max-width: 558px;
+		margin-bottom: 33px;
+		font-family: $Lato;
+		font-size: 15px;
+		line-height: 1.879;
+		letter-spacing: 0.07px;
+		word-spacing: 2px;
+		color: $BlackRussian;
+	}
+
+	.about-us__image-wrapper {
+		width: 100%;
+		max-width: 430px;
+		display: flex;
+		align-items: center;
+	}
+
+	.about-us__image {
+		display: block;
+	}
+
+	@include breakpoint(medium) {
+		padding: 100px 0;
+
+		.about-us__wrapper {
+			padding: 0 15px;
+		}
+	}
+
+	@include breakpoint(small) {
+		padding-top: 38px;
+		padding-bottom: 55px;
+
+		.about-us__info {
+			margin-bottom: 30px;
+			padding: 0 10px;
+		}
+
+		.about-us__wrapper {
+			flex-direction: column;
+			margin: 0 auto;
+			padding: 0;
+		}
+
+		.about-us__button {
+			display: inline-block;
+			margin-bottom: 66px;
+		}
+		
+		.about-us__info,
+		.about-us__subtitle,
+		.about-us__title {
+			text-align: center;
+		}
+
+		.about-us__info {
+			margin: 0 auto;
+		}
+
+		.about-us__subtitle {
+			font-size: 32px;
+		}
+
+		.about-us__text {
+			max-width: none;
+			text-align: left;
+		}
+		
+		.about-us__image-wrapper {
+			margin: 0 auto;
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		.about-us__subtitle {
+			font-size: 20px;
+			line-height: 20px;
+			margin-bottom: 4px;
+		}
+
+		.about-us__title {
+			margin-bottom: 17px;
+			line-height: 32px;
+			font-size: 32px;
+			letter-spacing: 0.1px;
+			font-weight: 400;
+		}
+
+		.about-us__image-wrapper {
+			margin: 0 auto;
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.about-us__image {
+			width: 100%;
+			max-width: 270px;
+			margin: 0 auto;
+		}
+	}
+}
